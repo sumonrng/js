@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		JavaScript Blob
+	</title>
+</head>
+
+<body>
+	<a download="gfg.txt" href='#'
+		id="link">Download</a>
+
+	<script>
+		let abc = new Blob(["Geeks For Geeks"],
+				{ type: 'text/plain' });
+
+		link.href = URL.createObjectURL(abc);
+	</script>
+</body>
+
+</html>

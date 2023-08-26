@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="view" href="" target="_blank">View Blob in new tab</a>
+    <a id="download" href="" download="abc.txt">Download Blob</a>
+</body>
+<script>
+    $(function(){
+        var myBlob = new Blob(['Hello, I am Blob content'], {type: 'text/plain'})
+        var url = URL.createObjectURL(myBlob);
+        $("a#view").attr("href", url);
+        $("a#download").attr("href", url);
+    });
+</script>
+</html>
